@@ -20,6 +20,7 @@ data class Wallet(
     @JoinColumn(
         name = "user_id",
         nullable = false,
+        unique = true,
         foreignKey = ForeignKey(name = "fk_user_id")
     )
     @OnDelete(action = OnDeleteAction.CASCADE)
