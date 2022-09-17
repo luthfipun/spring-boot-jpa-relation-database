@@ -22,9 +22,13 @@ SpringBoot application Java Persistent API (JPA) hibernate with multiple relatio
       "code": "integer",
       "message": "number",
       "data": {
-        "name" : "string",
-        "email" : "string",
-        "wallet" : "string"
+        "id": "number",
+        "name": "string",
+        "user": {
+            "id": "number",
+            "name": "string",
+            "email": "string"
+        }
       }
     }
     ```
