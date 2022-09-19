@@ -2,6 +2,12 @@
 
 SpringBoot application Java Persistent API (JPA) hibernate with multiple relationship databases
 
+# TechStack
+
+- SpringBoot (2.7.3)
+- Kotlin
+- Spring Data JPA
+- MySQL Database
 
 ## API
 
@@ -62,7 +68,7 @@ SpringBoot application Java Persistent API (JPA) hibernate with multiple relatio
 
 ---
 
-### Many-to-Many Relationship
+### Many-to-Many Relationship (with Extra Columns)
 
 #### Request
 - Method : GET
