@@ -1,5 +1,6 @@
 package github.luthfipun.springbootjparelation.product.entity
 
+import github.luthfipun.springbootjparelation.order.entity.OrderProduct
 import github.luthfipun.springbootjparelation.product.model.ProductResponse
 import github.luthfipun.springbootjparelation.user.entity.User
 import javax.persistence.*
@@ -22,7 +23,10 @@ data class Product(
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "user_id", nullable = false, foreignKey = ForeignKey(name = "fk_product_user_id"))
-    val user: User
+    val user: User,
+
+    @OneToMany(mappedBy = "product", cascade = [CascadeType.ALL])
+    val orderProduct: MutableList<OrderProduct> = mutableListOf()
 ){
     fun toProductResponse(): ProductResponse {
         return ProductResponse(

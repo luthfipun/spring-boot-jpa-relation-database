@@ -84,10 +84,9 @@ SpringBoot application Java Persistent API (JPA) hibernate with multiple relatio
             "orderProduct": [
                 {
                   "id": "number",
-                  "productId": "number",
-                  "orderId": "number",
-                  "orderPrice": "number",
-                  "orderQty": "number"
+                  "price": "number",
+                  "qty": "number",
+                  "productName": "string"
                 }
             ] 
          }
